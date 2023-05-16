@@ -20,7 +20,7 @@ import copy from "copy-to-clipboard";
 const Post = ({ post }) => {
   const [user, setUser] = useState({});
   const currentUser = useSelector((state) => state.currentUserReducer);
-  const [showOption, setShowOption] = useState(false);
+  const [showOption, setShowOption] = useState();
   const [commentText, setCommentText] = useState();
   const users = useSelector((state) => state.usersReducer);
   const dispatch = useDispatch();
@@ -98,7 +98,7 @@ const Post = ({ post }) => {
         <div className="option">
           <SlOptions
             onClick={() => setShowOption(!showOption)}
-            style={{ cursor: "pointer", marginRight: "5px" }}
+            style={{ cursor: "pointer", marginTop: "5px" }}
           />
           {showOption && (
             <div className="option_box">
@@ -135,12 +135,16 @@ const Post = ({ post }) => {
       <div className="footer">
         <div className="buttons">
           <div className="" style={{ display: "flex", alignItems: "center" }}>
-            {post?.likes?.includes(currentUser?.result._id) ? (
+          {/* {post.likes?.length === 0 && (
+            <p style={{ fontSize: "14px", padding: "0 10px" }}>No likes</p>
+          )} */}
+            {post.likes?.includes(currentUser?.result._id) ? (
               <AiFillLike className="like-button" onClick={setdisLikePost} />
             ) : (
               <AiOutlineLike onClick={setLikePost} />
             )}
-            <span style={{ marginLeft: "2px" }}>{post.likes.length}</span>
+            <span style={{ marginLeft: "2px" }}>{post.likes?.length}</span>
+            
           </div>
           <GoComment onClick={navigateToPostPage} />
           <CiShare2 onClick={handleShare} />
@@ -160,10 +164,10 @@ const Post = ({ post }) => {
         </div>
         <div className="post-comments">
           {post.comments?.length === 0 && (
-            <p style={{ fontSize: "14px", padding: "0 10px" }}>No comments</p>
+            <p style={{ fontSize: "14px", padding: "20 10px" }}>No comments</p>
           )}
           {post.comments?.map((comment) => {
-            return <Comment comment={comment} key={comment._id} />;
+            return <Comment comment={ comment } key={comment._id} />;
           })}
         </div>
       </div>

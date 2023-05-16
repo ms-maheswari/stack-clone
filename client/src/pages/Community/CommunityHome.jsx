@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Community.css";
-import Poster from "../../assets/community-bg.png";
-import Logo from "../../assets/icon.png";
+// import Poster from "../../assets/community-bg.png";
+// import Logo from "../../assets/icon.png";
 import AboutCommunity from "./AboutCommunity";
 import Post from "../../components/Post/Post";
 import { GrAdd, GrClose } from "react-icons/gr";
@@ -26,6 +26,7 @@ const CommunityHome = () => {
   const [refresh, setRefresh] = useState(true);
   const [activeTab, setActiveTab] = useState("post");
 
+  
   return (
     <div className="community-container">
      
@@ -47,14 +48,16 @@ const CommunityHome = () => {
         ))}
       <div className="wrapper">
         <div className="community-poster">
-          <img src={Poster} alt="" />
+          {/* <img src={" "} alt="" /> */}
+          
+          <h1 >Welcome to Stack Overflow Community</h1>
         </div>
-        <div className="community-header">
+        {/* <div className="community-header">
           <div className="community-profile-image">
             <img src={Logo} alt="" />
           </div>
           <span className="title"> Welcome to Stack Overflow Community</span>
-        </div>
+        </div> */}
         <div className="tab-bar">
           <span
             className={activeTab === "post" && "active-tab"}
@@ -84,7 +87,7 @@ const CommunityHome = () => {
               <AboutCommunity />
               <SuggestionBox />
             </div>
-            <div className="posts">
+            <div className="post">
               {activeTab === "post" &&
                 PostsList.data?.map((post) => {
                   return <Post post={post} key={post._id} />;
@@ -93,9 +96,9 @@ const CommunityHome = () => {
                 PostsList.data
                   ?.filter(
                     (item) =>
-                      ((item.videoUrl != undefined || item.videoUrl != null) &&
+                      ((item.videoUrl !== undefined || item.videoUrl != null) &&
                         item.desc !== "") ||
-                      ((item.videoUrl != undefined || item.videoUrl != null) &&
+                      ((item.videoUrl !== undefined || item.videoUrl != null) &&
                         item.desc === "")
                   )
                   .map((post) => {
