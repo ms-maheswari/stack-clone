@@ -11,3 +11,8 @@
 .post-page .comment-box {
   display: block;
 }
+
+.post-page .post-file-box{
+  width: 400px;
+  
+}

@@ -1,31 +1,33 @@
-import React from 'react'
-import './LeftSidebar.css'
-import { NavLink } from 'react-router-dom'
-import Globe from '../../assets/Globe.svg'
+import React from "react";
+import { NavLink } from 'react-router-dom';
+
+import globe from '../../assets/Globe.svg';
+import './LeftSidebar.css';
 
 const LeftSidebar = () => {
-  return (
-    <div className='left-sidebar'>
-        <nav className='side-nav'>
-            <NavLink to='/' className='side-nav-links' activeclassname='active' >
-                <p>Home</p>
-            </NavLink>
-            <div className='side-nav-div'>
-                <div><p>PUBLIC</p></div>
-                <NavLink to='/Questions' className='side-nav-links' activeclassname='active'>
-                    <img src={Globe} alt="Globe" width="18"/>
-                    <p style={{paddingLeft: "10px"}}> Questions </p>
+    
+    return (
+        <div className="left-sidebar">
+            <nav className="side-nav">
+                <NavLink to="/" className="side-nav-links" activeclass="active">
+                    <p>Home</p>
                 </NavLink>
-                <NavLink to='/Tags' className='side-nav-links' style={{paddingLeft: "40px"}}>
-                    <p>Tags</p>
-                </NavLink>
-                <NavLink to='/Users' className='side-nav-links' style={{paddingLeft: "40px"}}>
-                <p>Users</p>
-                </NavLink>
-            </div>
-        </nav>
-    </div>
-  )
+                <div className="side-nav-div">
+                    <div><p>PUBLIC</p></div>
+                    <NavLink to="/Questions" className="side-nav-links" activeclass="active">
+                        <img src={globe} alt="globe" height="18"/>
+                        <p style={{paddingLeft: "10px"}}>Questions</p>
+                    </NavLink>
+                    <NavLink to="/Tags" className="side-nav-links" activeclass="active" style={{paddingLeft: "40px"}}>
+                        <p>Tags</p>
+                    </NavLink>
+                    <NavLink to="/Users" className="side-nav-links" activeclass="active" style={{paddingLeft: "40px"}}>
+                        <p>Users</p>
+                    </NavLink>
+                </div>
+            </nav>
+        </div>
+    );
 }
 
-export default LeftSidebar
+export default LeftSidebar;

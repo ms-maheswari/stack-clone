@@ -1,19 +1,20 @@
 .post-container {
   background:rgb(200, 210, 210);
-  margin: 10px 10px;
+  margin: 50px 10px;
   border-radius: 30px;
 }
 
 .post-page .post-container{
-  margin-top: 100px ;
-  width: 500px;
-  
+  margin-top: 150px ;
+  /* width: 500px; */
+  width: 400px;
+  height: 500px;
 }
 
-.post-page{
-  height:100%;
-  
+.post-page .post-file-box .post-file{
+ width: 500px;
 }
+
 /* .post {
   margin: 20px 40px;
   background-color: #dab8b8;
@@ -188,3 +189,4 @@ video {
     height: 20px;
   }
 }
+

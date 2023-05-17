@@ -49,10 +49,7 @@ const ProfileBio = ({ currentProfile }) => {
               </>
             ) : (
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aliquam dignissimos veniam nemo exercitationem itaque, dicta
-                aspernatur facere labore libero possimus fuga omnis cum,
-                excepturi suscipit quos voluptatum fugit dolorem recusandae!
+                
               </p>
             )}
           </div>

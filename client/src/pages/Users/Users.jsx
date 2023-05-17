@@ -9,7 +9,7 @@ const Users = () => {
     <div className="home-container-1">
       <LeftSidebar />
       <div className="home-container-2">
-        <h1 style={{ fontWeight: "400" }} className="userlist-heading">
+        <h1 style={{ "fontWeight": "400", "margin-top": "60px" }} className="userlist-heading">
           Users
         </h1>
         

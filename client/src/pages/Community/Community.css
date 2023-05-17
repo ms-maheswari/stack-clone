@@ -22,6 +22,7 @@
   max-width: 1500px;
   margin: 10px;
   background-color: rgb(230, 223, 223);
+  
 }
 .community-container .community-poster {
   margin-top: 0px;
@@ -79,14 +80,14 @@
 .community-container .tab-bar {
   background: #bcc6e7;
   margin: 0px 0;
-  padding: 20px 30px;
+  padding: 10px 20px;
   border: 1px solid rgb(248, 175, 80);
 
   
 }
 .community-container .tab-bar span {
   margin: 0 10px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   
 }
@@ -131,7 +132,7 @@
   
   
 }
-.community-container .community-body .post {
+.community-container .community-body .posts  {
   margin-left: 30px;
   display: flex;
   flex-direction: column;
@@ -148,12 +149,7 @@
   border: 2px dashed rgb(114, 114, 125);
   
 }
-@media screen and (max-width: 500px) {
-  .sharepost-container {
-    width: 300px;
-   
-  }
-}
+
 .sharepost-container .close-icon {
   position: absolute;
   top: 10px;
@@ -232,6 +228,18 @@
 
 .about-tab {
   display: none;
+}
+
+@media screen and (max-width: 400px) {
+  .sharepost-container {
+    width: 300px;
+  }
+  .community-container .community-body .posts{
+    max-width: 500px;
+  }
+  .community-container .community-poster h1{
+    font-size: small;
+  }
 }
 
 @media screen and (max-width: 750px) {
