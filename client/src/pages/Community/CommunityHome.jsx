@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Community.css";
 // import Poster from "../../assets/community-bg.png";
-// import Logo from "../../assets/icon.png";
+import community from "../../assets/community.jpg";
 import AboutCommunity from "./AboutCommunity";
 import Post from "../../components/Post/Post";
 import { GrAdd, GrClose } from "react-icons/gr";
@@ -48,9 +48,9 @@ const CommunityHome = () => {
         ))}
       <div className="wrapper">
         <div className="community-poster">
-          {/* <img src={" "} alt="" /> */}
+          <img src={community} alt="" />
           
-          <h1 >Welcome to Stack Overflow Community</h1>
+          {/* <h1 >Welcome to Stack Overflow Community</h1> */}
         </div>
         {/* <div className="community-header">
           <div className="community-profile-image">
