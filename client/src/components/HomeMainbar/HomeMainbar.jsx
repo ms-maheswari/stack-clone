@@ -91,7 +91,6 @@ const HomeMainBar = () => {
                     <div>
                         <p>{questionsList.data.length} questions</p>
                         {questionsList.data.map((question) => {
-                            // console.log(question);
                             return <Questions question={question} key={question._id} />
                         })}
                     </div>

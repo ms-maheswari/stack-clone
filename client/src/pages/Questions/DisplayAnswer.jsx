@@ -36,7 +36,7 @@ function DisplayAnswer({ question, handleShare }) {
                                     <Avatar backgroundColor="green" px="8px" py="5px" color="white">
                                         {ans.userAnswered.charAt(0).toUpperCase()}
                                     </Avatar>
-                                    <div style={{fontSize: "15px", fontWeight: "bold"}}>
+                                    <div style={{fontSize: "15px"}}>
                                         {ans.userAnswered}
                                     </div>
                                 </Link>

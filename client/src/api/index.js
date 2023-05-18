@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// https://stackoverflow-clone-aaryan.onrender.com/"
+
 const API = axios.create({
   baseURL: "http://localhost:5000",
 });

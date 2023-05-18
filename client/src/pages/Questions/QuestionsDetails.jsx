@@ -145,7 +145,7 @@ function QuestionDetails() {
                                                     <Avatar backgroundColor="orange" px="8px" py="5px" color="white">
                                                         {question.userPosted.charAt(0).toUpperCase()}
                                                     </Avatar>
-                                                    <div style={{fontSize: "15px", fontWeight: "bold"}}>
+                                                    <div style={{fontSize: "15px"}}>
                                                         {question.userPosted}
                                                     </div>
                                                 </Link>

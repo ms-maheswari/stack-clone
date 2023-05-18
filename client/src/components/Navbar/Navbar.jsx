@@ -2,10 +2,9 @@ import React, {useEffect, useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentUser } from "../../actions/currentUser";
-// import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-// import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+
 import decode from "jwt-decode";
-// import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+
 import menu from '../../assets/menu.svg'
 import Avatar from '../Avatar/Avatar';
 
@@ -48,16 +47,27 @@ function Navbar() {
         dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
     },[dispatch, navigate, User?.token]);
 
-    const plan = () => {
-        dispatch({ type: 'LOGOUT'});
+    const handleplan = () => {
+       if(User === null){
+        alert("Login to continue")
+        navigate('/Auth')
+       }else{
         window.location.href='https://subscription-card-with-stripe.vercel.app'
-        dispatch(setCurrentUser(null))
+        // dispatch(setCurrentUser(null))
+       }
       }
-      const chatbot = () => {
-        dispatch({ type: 'LOGOUT'});
+      const handlechatbot = () => {
+        if(User === null){
+            alert("Login to continue")
+            navigate('/')
+           }else{
         window.location.href='https://chatbot-frontend-topaz.vercel.app'
-        dispatch(setCurrentUser(null))
+        // dispatch(setCurrentUser(null))
+           }
       }
+
+      
+
     return (
         <nav className="main-nav">
             <div className="navbar">
@@ -70,16 +80,17 @@ function Navbar() {
                             <li><Link style={{textDecoration: "none", color: "black"}} to="/Questions">Questions</Link></li>
                             <li><Link style={{textDecoration: "none", color: "black"}} to="/Tags">Tags</Link></li>
                             <li><Link style={{ textDecoration: "none", color: "black" }} to="/Users">Users</Link></li>
-                            <li><Link style={{textDecoration: "none", color: "black"}} to="/plans">Plans</Link></li>
-                            <li><Link style={{textDecoration: "none", color: "black"}} to="/stack-community">Community</Link></li>
+                            <li><Link style={{textDecoration: "none", color: "black"}} to="/"  onClick={handleplan}>Plans</Link></li>
+                            <li><Link style={{textDecoration: "none", color: "black"}} to="/CommunityHome">Community</Link></li>
+                            <li><Link style={{textDecoration: "none", color: "black"}} to="/" onClick={handlechatbot}>Chatbot</Link></li>
                         </ul>
                     </li>
                 </ul>
                 <Link to="/" className="nav-item nav-logo">
                     <img src={logo} alt="logo" height="25"/>
                 </Link>
-                <Link to="/" className="nav-item nav-btn" onClick={chatbot}>Chatbot</Link>
-                <Link to="/plans" className="nav-item nav-btn" onClick={plan}>Plans</Link>
+                <Link to="/" className="nav-item nav-btn" onClick={handlechatbot}>Chatbot</Link>
+                <Link to="/" className="nav-item nav-btn" onClick={handleplan}>Plans</Link>
                 <Link to="/CommunityHome" className="nav-item nav-btn">Community</Link>
                 <form>
                     <input type="text" placeholder="Search..."/>

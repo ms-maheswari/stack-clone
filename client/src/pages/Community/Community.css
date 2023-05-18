@@ -78,10 +78,10 @@
   font-weight: 500;
 }
 .community-container .tab-bar {
-  background: #bcc6e7;
+  background-color: #e0dee6;
   margin: 0px 0;
   padding: 10px 20px;
-  border: 1px solid rgb(248, 175, 80);
+  border: 2px solid rgb(150, 150, 150);
 
   
 }
@@ -237,8 +237,31 @@
   .community-container .community-body .posts{
     max-width: 500px;
   }
+  .community-container .community-poster{
+    height: 200px;
+  }
+
   .community-container .community-poster h1{
     font-size: small;
+    margin-top: 100px;
+    font-weight: 800;
+  }
+  .sharepost-container {
+    width: 350px;
+    position: relative;
+    border-radius: 20px;
+    border: 2px dashed rgb(114, 114, 125);
+    
+  }
+  .sharepost-container .share-buttons label {
+    margin-right: 5px;
+    background: linear-gradient(to left, #4dd6dd, #a3afe2);
+    color: #111;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    
   }
 }
 

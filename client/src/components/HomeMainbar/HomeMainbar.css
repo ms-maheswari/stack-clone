@@ -61,14 +61,14 @@
 .question-title-link{
   text-decoration: none;
   color: #037ecb;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   transition: 0.3s;
 }
 
 .question-title-link:hover{
   color: #009dff;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .display-tags-time{
@@ -99,7 +99,7 @@
 
 .display-tags-time .display-time span{
   font-weight: bold;
-  text-decoration: underline dotted;
+
 }
 
 @media screen and (max-width: 1000px) {

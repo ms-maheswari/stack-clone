@@ -12,7 +12,7 @@ import UserProfile from "./pages/UserProfile/UserProfile";
 import CommunityHome from "./pages/Community/CommunityHome";
 import PostPage from "./pages/PostPage/PostPage";
 import Chatbot from "./components/Chatbot/Chatbot";
-import Plans from './pages/Plans/Plans'
+import Plan from './pages/Plans/Plan'
 
 const AllRoutes = () => {
   return (
@@ -26,7 +26,7 @@ const AllRoutes = () => {
       <Route path="/Users" element={<Users />} />
       <Route path="/Users/:id" element={<UserProfile />} />
       <Route path="/Chatbot" element={<Chatbot />} />
-      <Route path="/Plans" element={<Plans />} />
+      <Route path="/Plan" element={<Plan />} />
       <Route path="/CommunityHome" element={<CommunityHome />} />
       <Route path="/stackoverflow-community/post/:id" element={<PostPage />} />
       <Route path="/stackoverflow-community" element={<CommunityHome />} />

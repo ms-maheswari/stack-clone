@@ -21,12 +21,14 @@
 }
 
 .user-name {
+  margin-top: 40px;
   padding-left: 20px;
 }
 .user-name p {
   color: #7e7e7e;
 }
 .edit-profile-btn {
+  margin: 60px 20px;
   padding: 8px 10px;
   border: solid 1px #7e7e7e;
   border-radius: 2px;
@@ -165,6 +167,9 @@ video {
   .user-bio-section {
     padding: 20px;
   }
+  .edit-profile-btn{
+    padding: 20px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -189,5 +194,11 @@ video {
     font-size: 2rem;
     background: rgb(232, 116, 54);
     color: #fff;
+  }
+  .edit-profile-btn{
+    padding: 5px;
+    width: 100px;
+    font-size: 13px;
+    margin-top: 90px;
   }
 }
