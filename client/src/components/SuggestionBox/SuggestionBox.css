@@ -100,7 +100,7 @@
     justify-self: flex-end;
     float: right;
     cursor: pointer;
-    margin-right: 50px;
+    margin-right: 0px;
     color: white;
   }
 }
