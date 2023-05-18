@@ -93,7 +93,7 @@ function QuestionDetails() {
     }
 
     const handleShare = () => {
-        const url = 'https://my-stack-overflow-akot.onrender.com';
+        const url = 'https://stack-clone.vercel.app';
         copy(url + location.pathname);
         alert("Url copied!!\nUse this to share the page.\n" + url + location.pathname);
     }
