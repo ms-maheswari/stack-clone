@@ -91,7 +91,7 @@
   height: 20px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   .side-box button {
     background: rgb(49, 128, 231);
     padding: 10px 20px;
