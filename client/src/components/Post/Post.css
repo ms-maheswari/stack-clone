@@ -12,7 +12,7 @@
 }
 
 .post-page .post-file-box .post-file{
- width: 500px;
+ width: 100%;
 }
 
 /* .post {
@@ -83,8 +83,8 @@
 }
 .post-container .post-file-box img,
 video {
-  max-width: 100%;
-  max-height:400px;
+  max-width: auto;
+  max-height:auto;
   overflow: hidden;
 }
 .post-container .post-file-box .desc {
