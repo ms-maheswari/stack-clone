@@ -39,8 +39,7 @@ const UserProfile = () => {
               <div className="user-name">
                 <h1>{currentProfile?.name}</h1>
                 <p>
-                  <FontAwesomeIcon icon={faBirthdayCake} /> Joined{" "}
-                  {moment(currentProfile?.joinedOn).fromNow()}
+                  <FontAwesomeIcon icon={faBirthdayCake} /> Joined {moment(currentProfile?.joinedOn).fromNow()}
                 </p>
                 {currentUser?.result._id !== id &&
                   (currentProfile?.followers.includes(
