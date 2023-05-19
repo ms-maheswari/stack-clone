@@ -15,5 +15,11 @@
 .post-page .post-file-box{
   width: auto;
   height: auto;
-  
+}
+
+@media screen and (max-width: 400px) {
+  .post-page .post-file-box{
+    width: auto;
+    height: auto;
+  }
 }
