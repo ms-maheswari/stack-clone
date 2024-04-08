@@ -2,8 +2,7 @@ import axios from "axios";
 
 
 const API = axios.create({
-  
-  baseURL: "https://stack-backend-iota.vercel.app/",
+  baseURL: "https://stack-backend-iewf.onrender.com",
  
 });
 
