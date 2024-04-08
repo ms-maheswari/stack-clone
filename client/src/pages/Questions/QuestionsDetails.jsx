@@ -17,61 +17,6 @@ function QuestionDetails() {
     const { id } = useParams();
     const [Answer, setAnswer] = useState('');
     const questionsList = useSelector((state) => (state.questionsReducer));
-
-    // const questionsList = [
-    //     {
-    //         _id: '1',
-    //         upVotes: 3,
-    //         downVotes: 2,
-    //         noOfAnswers: 1,
-    //         questionTitle: "what is a function?",
-    //         questionBody: "It meant to be",
-    //         questionTags: ["java", "nodejs", "python", "reactjs", "mongodb"],
-    //         userPosted: "bhav",
-    //         userId: 1,
-    //         askedOn: "jan 1",
-    //         answer: [{
-    //             answerBody: "Answer",
-    //             userAnswered: "bhav",
-    //             answeredOn: "jan 2",
-    //             userId: 2
-    //         }]
-    //     },{
-    //         _id: '2',
-    //         upVotes: 3,
-    //         downVotes: 2,
-    //         noOfAnswers: 1,
-    //         questionTitle: "what is a function?",
-    //         questionBody: "It meant to be",
-    //         questionTags: ["javascript", "R", "python"],
-    //         userPosted: "bhav",
-    //         userId: 1,
-    //         askedOn: "jan 1",
-    //         answer: [{
-    //             answerBody: "Answer",
-    //             userAnswered: "bhav",
-    //             answeredOn: "jan 2",
-    //             userId: 2
-    //         }]
-    //     },{
-    //         _id: '3',
-    //         upVotes: 1,
-    //         downVotes: 0,
-    //         noOfAnswers: 1,
-    //         questionTitle: "what is a function?",
-    //         questionBody: "It meant to be",
-    //         questionTags: ["javascript", "R", "python"],
-    //         userPosted: "bhav",
-    //         userId: 2,
-    //         askedOn: "jan 1",
-    //         answer: [{
-    //             answerBody: "Answer",
-    //             userAnswered: "bhav",
-    //             answeredOn: "jan 2",
-    //             userId: 3
-    //         }]
-    //     }
-    // ]
     
     const User = useSelector((state) => (state.currentUserReducer));
     const navigate = useNavigate();
@@ -93,7 +38,7 @@ function QuestionDetails() {
     }
 
     const handleShare = () => {
-        const url = 'https://stack-clone.vercel.app';
+        const url = 'https://stack-backend-iota.vercel.app/';
         copy(url + location.pathname);
         alert("Url copied!!\nUse this to share the page.\n" + url + location.pathname);
     }
