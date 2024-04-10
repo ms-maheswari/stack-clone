@@ -50,7 +50,10 @@ This project is a clone of the popular Q&A platform StackOverflow. It allows use
    
    npm start
 
-6. Start the frontend development server:
-   
+6. To start the frontend development, navigate to the project directory:
+
    cd client
+
+7. Start the frontend:
+
    npm start
