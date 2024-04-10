@@ -23,7 +23,7 @@ This project is a clone of the popular Q&A platform StackOverflow. It allows use
 
 1. Clone the repository:
 
-   git clone https://github.com/ms-maheswari/stack-clone.git
+   <!-- git clone https://github.com/ms-maheswari/stack-clone.git -->
 
 2. Navigate to the project directory:
  
