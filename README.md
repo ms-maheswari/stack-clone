@@ -12,7 +12,7 @@ This project is a clone of the popular Q&A platform StackOverflow. It allows use
 
 ## Tech Stack
 
-- **Frontend**: React.js
+- **Frontend**: React.js, Bootstrap
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JSON Web Tokens (JWT)
