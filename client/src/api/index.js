@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const API = axios.create({
-  baseURL: "https://stack-backend-iewf.onrender.com",
- 
+  // baseURL: "https://stack-backend-iewf.onrender.com",
+ baseUrl: "https://stack-clone.vercel.app/",
 });
 
 API.interceptors.request.use((req) => {
